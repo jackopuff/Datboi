@@ -24,5 +24,7 @@ public class DatController
 		System.out.println("What is your name?");
 		String userInput = readKeyboardInput.next();
 		System.out.println("You said " + userInput);
+		System.out.println("a");
+		System.out.println("c");
 	}
 }
