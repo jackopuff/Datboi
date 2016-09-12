@@ -34,13 +34,13 @@ public class DatController
 		System.out.println("how much does a Wendy's Dave's Double cost?");
 		Double priceInput = readKeyboardInput.nextDouble();
 		
-		if (priceInput == 6.19) 
+		if (priceInput == 5.19) 
 			{
 				System.out.println("you are correct");
 			}
 		else
 			{
-				System.out.println("No, a Wendy's Dave's Double costs $6.19");
+				System.out.println("No, a Wendy's Dave's Double costs $5.19");
 			}
 		readKeyboardInput.nextLine();
 
@@ -55,21 +55,39 @@ public class DatController
 		System.out.println("Your favorite president is " + presidentInput);
 	
 		
-		System.out.println("what was your first pet's name?");
-		String petInput = readKeyboardInput.next();
-		System.out.println("Your pet's name is " +petInput);
-		readKeyboardInput.nextLine();
+		System.out.println("Have you ever owned any pets?");
+		String firstpetInput = readKeyboardInput.next();
+		if (firstpetInput.equalsIgnoreCase("Y") || firstpetInput.equalsIgnoreCase("Yes"))
+				{					
+					System.out.println("what was your first pet's name?");
+					String petInput = readKeyboardInput.next();
+					System.out.println("Your pet's name is " +petInput);					
+				}
+		readKeyboardInput.nextLine();	
 	
 		
 		System.out.println("Did you brush your teeth today? (Y/N");
 		String teethInput = readKeyboardInput.next();
-		if (teethInput.equals ("Y") || teethInput.equals("Yes") || teethInput.equals("yes") || teethInput.equals("y"))
+		if (teethInput.equalsIgnoreCase ("Y") || teethInput.equalsIgnoreCase("Yes"))
 			{
 				System.out.println("I'm Glad");
 			}
 		else
 			{
 				System.out.println("That's nasty");
+			}
+		readKeyboardInput.nextLine();
+		
+		System.out.println("What is your favorite restaurant?");
+		String foodInput = readKeyboardInput.next();
+		System.out.println("Your favorite restaurant is " + foodInput);
+		
+		System.out.println("Do you have any stolen property on you?");
+		String stolenInput = readKeyboardInput.next();
+		if (stolenInput.equalsIgnoreCase("Y") || stolenInput.equalsIgnoreCase("Yes"))
+			{
+				System.out.println("Stop! You've violated the law. Pay the court a fine or serve your sentence.");
+				System.out.println("Your stolen goods are now forfeit");
 			}
 		readKeyboardInput.nextLine();
 	}
